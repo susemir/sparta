@@ -3,30 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<style type="css">
-    .frame {
-    width: 40px;
-    border-radius: 10px;
-    }
-</style>
+    <title>1주차 과제_한수진</title>
+    <style>
+      .mystyle {
+        color: black;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+     
+      .myimage {
+        width: 400px;
+        margin: 50px auto 0 auto;
+      }
+
+      .myform {
+        font-size: 14px;
+        font-weight: bold;
+
+        margin: 0 400px auto 400px;
+          <!--폼 작성하는  부분이 가운데에 네모박스 모양으로 나타나도록 margin을 사용했어요. 그런데 왼쪽오른쪽 400px씩 지정하지 않아도 적당히 화면 중앙에 나타내는 방법은 없을까요?-->
+        
+        background-position: center;
+        background-color: rgb(235, 233, 135);
+        border-style: dotted;
+        border-color: red;
+      }
+
+      .mybutton {
+         background-color: orangered;
+         color: white;
+         border-radius: 1rem;
+         padding: 15px 32px;
+         text-align: center;
+         text-decoration: none;
+         font-size: 16px;
+        }
+    </style>
+</head>
 </head>
 
 <body>
-<div class = "frame">
+<div class = "mystyle">
+  <div class = "myimage">
     <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-wifi-select-space-201909_GEO_US?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1567443069807" \
     class="img-fluid" alt="Responsive image" width="400px">
+    <table>
+      <th scope="col"><h2>아이패드 프로 2세대 </h2></th>
+      <th scope="col"> <h4> 가격: 50만 원 </h4></table>
+    <h5> 중고지만 성능에 문제 없어요. 2년 동안 사용했습니다. 애플 펜슬도 함께 보내드려요. </h5>
+      </div>
 </div>
-<h2>아이패드 프로 2세대 10.5 inch</h2> <h4> 가격: 50만 원 </h4>
-<h4> 중고지만 쓸만해요 </h4>
-<h3>주문하기</h3>
-<form>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">Email address</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
+<div class="myform">
+      <label for="exampleFormControlInput1">주문자 성함</label>
+      <input type="email" class="form-control" \
+      id="exampleFormControlInput1" \
+      placeholder="홍길동">
+      <div></div>
+      <label for="exampleFormControlSelect1">수량</label>
       <select class="form-control" id="exampleFormControlSelect1">
         <option>1</option>
         <option>2</option>
@@ -34,16 +73,22 @@
         <option>4</option>
         <option>5</option>
       </select>
+      <div></div>
+      <label for="exampleFormControlInput1">주소</label>
+      <input type="email" class="form-control" \
+      id="exampleFormControlInput1" \
+      placeholder="서울시 스파르타구 코딩동 클럽로 123">
+        <div></div>
+        <label for="exampleFormControlInput1">전화번호</label>
+        <input type="email" class="form-control" \
+        id="exampleFormControlInput1" \
+        placeholder="010-0000-0000">
+        <br></br>
+          <button type="button" class = "mybutton">주문하기</div>
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect2">Example multiple select</label>
-      <select multiple class="form-control" id="exampleFormControlSelect2">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
+<br></br>
 </body>
 </html>
