@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style type="css">
+        .frame {
+            width: 40px;
+            border-radius: 10px;
+        }
+</style>
+    <title>1주차 과제_한수진</title>
+    <style>
+        .mystyle {
+            color: black;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .myimage {
+            width: 400px;
+            margin: 50px auto 0 auto;
+        }
+
+        .myform {
+            font-size: 14px;
+            font-weight: bold;
+
+            margin: 0 400px auto 400px;
+
+            background-position: center;
+            background-color: rgb(235, 233, 135);
+            border-style: dotted;
+            border-color: red;
+        }
+
+        .mybutton {
+            background-color: orangered;
+            color: white;
+            border-radius: 1rem;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function check() {
+            // alert("된다!");
+            if ($('#check_email').val().trim() == "") {
+                alert("이메일을 입력해 주세요!");
+                $('#check_email').focus();
+                return;
+            }
+            else if ($('#name').val().trim() == "") {
+                alert("성함을 입력해 주세요!");
+                $('#name').focus();
+                return;
+            }
+            // amount 부분이 작동하지 않아요! //
+            else if ($('#amout') == null) {
+                alert("수량을 선택해 주세요");
+                $('#amount').focus();
+                return;
+            }
+            else if ($('#adress').val().trim() == "") {
+                alert("주소를 입력해 주세요");
+                $('#adress').focus();
+                return;
+            }
+            else if ($('#phone').val().trim() == "") {
+                alert("전화번호를 입력해 주세요");
+                $('#phone').focus();
+            }
+            else
+                alert("주문이 완료되었습니다")
+        }
+    </script>
+</head>
+
+
+<body>
+    <div class="frame">
+        <div class="mystyle">
+            <div class="myimage">
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-wifi-select-space-201909_GEO_US?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1567443069807"
+                    class="img-fluid" alt="Responsive image" width="400px">
+                <table>
+                    <th scope="col">
+                        <h2>아이패드 프로 2세대 </h2>
+                    </th>
+                    <th scope="col">
+                        <h4> 가격: 50만 원 </h4>
+                </table>
+                <h5> 중고지만 성능에 문제 없어요. 2년 동안 사용했습니다. 애플 펜슬도 함께 보내드려요. </h5>
+            </div>
+            <div class="form-group">
+                <div class="myform">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input id="check_email" input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                    <br></br>
+                    <label for="exampleFormControlInput1">주문자 성함</label>
+                    <input id="name" input type="text" class="form-control" id="exampleFormControlInput1"
+                        placeholder="홍길동">
+                    <br></br>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">수량</label>
+                        <!-- 여기에 input id = "amount"를 넣으면 수량 선택 창이 사라지고 그냥 1,2,3, 숫자로만 나타나요ㅠㅠ-->
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="">수량을 선택해 주세요</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <br></br>
+                        <label for="exampleFormControlInput1">주소</label>
+                        <input id="adress" input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="서울시 스파르타구 코딩동 클럽로 123">
+                        <br></br>
+                        <label for="exampleFormControlInput1">전화번호</label>
+                        <input id="phone" input type="tel" class="form-control" id="exampleFormControlInput1"
+                            placeholder="010-0000-0000">
+                        <br></br>
+                        <button onclick="check()" button type="button" class="mybutton">주문하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
